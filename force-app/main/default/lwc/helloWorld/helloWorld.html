@@ -1,0 +1,35 @@
+<template>
+    <br/> <!--Means break ro or change the Line-->
+    <!-- Displaying data from JS file with the help of basic HTML-->
+    fisrt Name: {contact_firstName} <br/>
+    Age: {contact_age} <br/>
+    Salary: {contact_salary}
+
+    <hr/> <!--Meaning Horizontal Row-->
+    <!--Displaying data from JS file with the help of SF prebuilt Component-->
+    Name:
+    <lightning-formatted-name
+                first-name={contact_firstName}
+                last-name={contact_lastName}
+                format="short"
+     ></lightning-formatted-name><br/>
+
+      Age:
+     <lightning-formatted-number 
+                value={contact_age}
+     ></lightning-formatted-number><br/>
+      Salary:
+     <lightning-formatted-number 
+                value={contact_salary} 
+                format-style="currency" 
+                currency-code="USD"
+      ></lightning-formatted-number><br/>
+      <div>
+      <lightning-input 
+                type="checkbox" 
+                label="Is Salaried"
+                name="input1"
+                value={contact_isSalaries}
+      ></lightning-input>
+      </div>
+</template>

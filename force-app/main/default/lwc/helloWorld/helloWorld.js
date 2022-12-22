@@ -12,5 +12,5 @@ export default class HelloWorld extends LightningElement {
     @track contact_isSalaries=true;
     @track contact_salary=2334.45
 
-    //Previously SF required to @track required at the HTML 
+    //Previously SF required to @track required at the HTML.
 }

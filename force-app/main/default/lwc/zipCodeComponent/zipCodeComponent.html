@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  title="Address Info">
+        <div class="slds-p-horizontal_small">
+           <lightning-input 
+            type="text" 
+            label="Enter zip code"
+            onchange={handleZipCode} 
+           ></lightning-input>
+           SELECTED CONTACT;
+           <lightning-formatted-name
+                first-name={selectedContact.FirstName}
+                last-name={selectedContact.LastName}
+            ></lightning-formatted-name>
+            <hr/>
+           <c-address-component   
+            zip-code={zipCodeFromInput}
+            oncontactselected={handleContactSelected}
+           ></c-address-component> <!--With adding this past 2 lines, help us to make zip code parent component and address child. We added name of child component so it will be called under the parent component. ON (oncontactselected) we need to add prefix to handle custom event on child component-->
+        </div>
+    </lightning-card>
+    <!--handleZipCode method above(onchange={handleZipCode}) will capture/get the zip code value after it is entered-->
+</template>

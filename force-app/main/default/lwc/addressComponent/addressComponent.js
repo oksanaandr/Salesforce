@@ -34,5 +34,5 @@ selectHandler(event) {
 
     // Dispatches the event.
     this.dispatchEvent(selectedEvent);
-   }
+   } 
 }
